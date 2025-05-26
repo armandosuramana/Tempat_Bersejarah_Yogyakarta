@@ -26,6 +26,7 @@ import ArcadanReliefPrambananView from '../views/ArcadanReliefPrambananView.vue'
 import CandiPendampingView from '../views/CandiPendampingView.vue'
 import StupaBorobudurView from '../views/StupaBorobudurView.vue'
 import ArcadanReliefBorobudurView from '../views/ArcadanReliefBorobudurView.vue'
+import AboutUsView from '../views/AboutUsView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
@@ -54,6 +55,8 @@ const routes = [
   { path: '/candi-pendamping', name: 'CandiPendamping', component: CandiPendampingView },
   { path: '/stupa-borobudur', name: 'StupaBorobudur', component: StupaBorobudurView },
   { path: '/arca-relief-borobudur', name: 'ArcadanReliefBorobudur', component: ArcadanReliefBorobudurView },
+  { path: '/about', name: 'About', component: AboutUsView },
+
 ]
 
 const router = createRouter({

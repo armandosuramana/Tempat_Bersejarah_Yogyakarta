@@ -5,6 +5,7 @@
       <nav>
         <button @click="goHome">Home</button>
         <button @click="goToVisualisasi">Visualisasi</button>
+        <button @click="goToAbout">About Us</button>
       </nav>
     </div>
   </header>
@@ -12,22 +13,22 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-// Mengimpor fungsi useRouter dari vue-router untuk navigasi halaman secara programatis
 
 const router = useRouter()
-// Mengambil instance router aktif agar bisa digunakan untuk push()
 
 const goHome = () => {
   router.push({ name: 'Home' })
 }
-// Fungsi untuk navigasi ke halaman dengan nama route 'Home' (biasanya didefinisikan dalam routes.js)
 
 const goToVisualisasi = () => {
   router.push({ name: 'Visualisasi' })
 }
-// Fungsi untuk navigasi ke halaman dengan nama route 'Visualisasi'
-</script>
 
+const goToAbout = () => {
+  router.push({ name: 'About' })
+}
+// Pastikan route 'About' sudah didefinisikan di router/index.js
+</script>
 
 <style scoped>
 .header {
@@ -55,9 +56,9 @@ h1 {
 
 nav {
   display: flex;
-  gap: 20px; /* jarak antar tombol */
+  gap: 20px;
   align-items: center;
-  margin-right: 30px; /* geser tombol ke kiri dari tepi kanan */
+  margin-right: 30px;
 }
 
 button {
