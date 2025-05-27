@@ -35,7 +35,7 @@
 
 <script setup>
 // Mengimpor fitur Vue dan D3
-import { ref, onMounted, watch } from "vue";
+import { ref, onMounted, watch, nextTick } from "vue";
 import { useStore } from "vuex";
 import * as d3 from "d3";
 
@@ -81,7 +81,7 @@ watch(
 );
 
 // Fungsi menggambar graph
-function drawGraph() {
+async function drawGraph() {
   if (!graphContainer.value || graphData.value.length === 0) return;
 
   const container = graphContainer.value;
@@ -196,7 +196,10 @@ function drawGraph() {
       .attr("y", (d) => (d.source.y + d.target.y) / 2 - 5);
   });
 
-  simulation.on("end", fitGraph);
+  simulation.on("end", async () => {
+    await nextTick();
+    fitGraph();
+  });
 
   function dragstarted(event, d) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -229,10 +232,14 @@ function zoomOut() {
 // Fungsi Fit Graph
 function fitGraph() {
   if (!svgElement || !zoomInstance) return;
+  if (!graphContainer.value) return;
+
   const svg = d3.select(graphContainer.value).select("svg");
   const width = graphContainer.value.clientWidth;
   const height = graphContainer.value.clientHeight;
+
   const bounds = svgElement.node().getBBox();
+  if (bounds.width === 0 || bounds.height === 0) return;
 
   const scale = 0.9 * Math.min(width / bounds.width, height / bounds.height);
   const translateX = width / 2 - (bounds.x + bounds.width / 2) * scale;
@@ -244,10 +251,6 @@ function fitGraph() {
 }
 </script>
 
-
 <style scoped>
-svg {
-  width: 100%;
-  height: 100%;
-}
+/* opsional styling */
 </style>
