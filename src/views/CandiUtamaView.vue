@@ -10,7 +10,7 @@
         
         <div v-for="(candi, index) in filteredCandis" :key="index" class="candi-item">
           <h3 class="candi-name">{{ candi.nama }}</h3>
-          <p class="candi-stats">Tinggi bangunan: <strong>{{ candi.tinggi }} meter</strong></p>
+          <p class="candi-stats">Tinggi bangunan: <strong>{{ formatHeight(candi.tinggi) }}</strong></p>
           <p class="candi-desc">{{ formatDescription(candi.komentar) }}</p>
           <hr class="divider" v-if="index < filteredCandis.length - 1">
         </div>
@@ -53,6 +53,21 @@ export default {
     formatDescription(desc) {
       if (!desc || desc === '') return 'Deskripsi candi ini belum tersedia.';
       return desc.endsWith('.') ? desc : desc + '.';
+    },
+    formatHeight(height) {
+      if (!height || height === 'tidak diketahui') return 'tidak diketahui';
+      
+      // Remove any existing 'meter' unit and extra spaces
+      const cleanedHeight = height.toString()
+        .replace(/\s*meter\s*/gi, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+        
+      // Check if the value already ends with a number
+      if (/^\d+$/.test(cleanedHeight)) {
+        return `${cleanedHeight} meter`;
+      }
+      return cleanedHeight;
     },
     fetchCandis() {
       const endpoint = 'http://localhost:3030/TempatBersejarah/query';
