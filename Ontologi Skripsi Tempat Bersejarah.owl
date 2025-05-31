@@ -1,0 +1,2718 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ukdw.ac.id/ontologi/tempatbersejarah#"
+     xml:base="http://ukdw.ac.id/ontologi/tempatbersejarah"
+     xmlns:tb="http://ukdw.ac.id/ontologi/tempatbersejarah#"
+     xmlns:ns2="http://ainf.aau.at/ontodebug#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#">
+        <ns2:testCase>
+            <rdf:Description>
+                <ns2:axiom>relief_ramayana Type Arca</ns2:axiom>
+                <ns2:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ns2:type>
+            </rdf:Description>
+        </ns2:testCase>
+        <ns2:testCase>
+            <rdf:Description>
+                <ns2:axiom>benteng_vredeburg memilikiKomponenBangunan gedhong_madaran</ns2:axiom>
+                <ns2:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ns2:type>
+            </rdf:Description>
+        </ns2:testCase>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ainf.aau.at/ontodebug#axiom -->
+
+    <owl:AnnotationProperty rdf:about="http://ainf.aau.at/ontodebug#axiom">
+        <rdfs:subPropertyOf rdf:resource="http://ainf.aau.at/ontodebug#testCase"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://ainf.aau.at/ontodebug#testCase -->
+
+    <owl:AnnotationProperty rdf:about="http://ainf.aau.at/ontodebug#testCase"/>
+    
+
+
+    <!-- http://ainf.aau.at/ontodebug#type -->
+
+    <owl:AnnotationProperty rdf:about="http://ainf.aau.at/ontodebug#type">
+        <rdfs:subPropertyOf rdf:resource="http://ainf.aau.at/ontodebug#testCase"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bagianDari -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bagianDari">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksKeraton"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksTamanKeraton"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#berlokasiDi -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#berlokasiDi">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagian -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagian">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Stupa"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianStupa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagianCandi -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagianCandi">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Candi"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianCandi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiCandi -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiCandi">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksCandiHindu"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Candi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiCandiPendamping -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiCandiPendamping">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiHindu"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiPendamping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiCandiTrimurti -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiCandiTrimurti">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiHindu"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiTrimurti"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiFungsi -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiFungsi">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Fungsi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiFungsiAsli -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiFungsiAsli">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiFungsiSekarang -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiFungsiSekarang">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiGayaArsitektur -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiGayaArsitektur">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#GayaArsitektur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiHiasanCandi -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiHiasanCandi">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Candi"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#HiasanCandi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiKomplekCandiHindu -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiKomplekCandiHindu">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiHindu"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksCandiHindu"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiKomponenBangunan -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiKomponenBangunan">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiKomponenLuarBangunan -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiKomponenLuarBangunan">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenLuarBangunan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiNilaiSejarah -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiNilaiSejarah">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiPendiri -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiPendiri">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Pendiri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiPeristiwaSejarah -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiPeristiwaSejarah">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiSejarah -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiSejarah">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Sejarah"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiStrukturArsitektural -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiStrukturArsitektural">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#terbuatDari -->
+
+    <owl:ObjectProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#terbuatDari">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#dikelolaOleh -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#dikelolaOleh">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#koordinatGeografis -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#koordinatGeografis">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#lokasiBangunan -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasiBangunan">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiAlamat -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiAlamat">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBentuk -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBentuk">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Stupa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiLuas -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiLuas">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiTinggi -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiTinggi">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Candi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#noRegistrasi -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#noRegistrasi">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#statusKepemilikan -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#statusKepemilikan">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#tahunPendirian -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#tahunPendirian">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#terletakDi -->
+
+    <owl:DatatypeProperty rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#terletakDi">
+        <rdfs:domain rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#AlasStupa -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#AlasStupa">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianStupa"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BadanStupa"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Penyambung"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PuncakStupa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#AlunAlun -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#AlunAlun">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenLuarBangunan"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Pongangan"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Sumur"/>
+        <rdfs:comment>Alun-Alun adalah ruang terbuka luas yang biasanya berada di depan atau di sekitar kompleks Keraton. Tempat ini memiliki fungsi sosial, budaya, dan keagamaan, serta sering digunakan untuk upacara kerajaan, kegiatan masyarakat, dan berbagai perayaan tradisional</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Arca -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Arca">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#HiasanCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Relief"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Stupa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaBuddha -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaBuddha">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Arca"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaPelindung"/>
+        <rdfs:comment>Adalah arca yang terdapat di candi borobudur yang terdiri dari 505 buah</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Arca"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaPelindung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaPelindung -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaPelindung">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Arca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#AtapCandi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#AtapCandi">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BadanCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KakiCandi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#BadanCandi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#BadanCandi">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KakiCandi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#BadanStupa -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#BadanStupa">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianStupa"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Penyambung"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PuncakStupa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#BagianCandi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianCandi">
+        <rdfs:comment>Class ini merepresentasikan bagian-bagian dari sebuah candi, seperti kaki candi, tubuh candi, dan atap candi</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#BagianStupa -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianStupa">
+        <rdfs:comment>Class ini merepresentasikan bagian dari struktur stupa</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Bale -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Bale">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gapura"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gerbang"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TanggaCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok"/>
+        <rdfs:comment>Bale adalah sebuah struktur arsitektural yang merupakan bangunan kecil dan tidak memiliki dinding</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gapura"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gerbang"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TanggaCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok"/>
+        <rdfs:comment>Bangsal adalah sebuah struktur arsitektural berupa bangunan besar yang tidak memiliki dinding</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Candi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Candi">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#CandiBuddha -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiBuddha">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Candi"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagianCandi"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianCandi"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiHiasanCandi"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#HiasanCandi"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiHindu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#CandiHindu -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiHindu">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Candi"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagianCandi"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianCandi"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiHiasanCandi"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#HiasanCandi"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#CandiPendamping -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiPendamping">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiHindu"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiTrimurti"/>
+        <rdfs:comment>Candi pendamping di Candi Prambanan memiliki fungsi sebagai pendamping dan penjaga bagi candi utama. Mereka juga melengkapi kompleks candi dengan menambahkan kesan megah dan estetis</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#CandiTrimurti -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiTrimurti">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiHindu"/>
+        <rdfs:comment>Candi Trimurti di Candi Prambanan adalah tiga candi utama yang dipersembahkan untuk tiga dewa utama Hindu: Brahma (dewa pencipta), Wisnu (dewa pemelihara), dan Siwa (dewa pemusnah). Candi-candi ini terletak di bagian tengah kompleks Candi Prambanan dan merupakan bangunan terbesar dan tertinggi di sana</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Fungsi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Fungsi">
+        <rdfs:comment>Class ini mendefinisikan fungsi atau peran dari suatu struktur dalam tempat bersejarah, seperti memiliki  fungsi asli, dan fungsi sekarangnya</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Fungsi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Fungsi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Gapura -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Gapura">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gerbang"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TanggaCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#GayaArsitektur -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#GayaArsitektur">
+        <rdfs:comment>Class ini merepresentasikan berbagai gaya arsitektur yang digunakan dalam pembangunan tempat bersejarah, seperti gaya Hindu, Buddha, atau kolonial</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Masjid"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Pulo"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <rdfs:comment>Class ini merpresentasikan gedung yang dimiliki oleh Taman Keraton, Benteng dan Keraton</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Gerbang -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Gerbang">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TanggaCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#HiasanCandi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#HiasanCandi">
+        <rdfs:comment>Class ini mencakup berbagai jenis hiasan atau ornamen yang ditemukan di candi, seperti relief, arca, dan stupa</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#KakiCandi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KakiCandi">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianCandi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TanggaCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Kompleks -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Kompleks">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksBenteng -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksBenteng">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Kompleks"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksCandiHindu"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksKeraton"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksTamanKeraton"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksCandiHindu -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksCandiHindu">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Kompleks"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiCandi"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiPendamping"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiCandi"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiTrimurti"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksKeraton"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksTamanKeraton"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksKeraton -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksKeraton">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Kompleks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksTamanKeraton -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksTamanKeraton">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Kompleks"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bagianDari"/>
+                <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksKeraton"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan">
+        <rdfs:comment>Class ini mencakup berbagai elemen atau bagian dari suatu bangunan dalam tempat bersejarah</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenLuarBangunan -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenLuarBangunan">
+        <rdfs:comment>Komponen Luar Bangunan adalah bagian yang berada di luar struktur utama suatu bangunan, tetapi memiliki keterkaitan dengan bangunan tersebut, baik sebagai elemen pelengkap, batas, atau area fungsional yang mendukung lingkungan bangunan</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi">
+        <rdfs:comment>Class ini merepresentasikan lokasi geografis dari suatu tempat bersejarah, termasuk koordinat dan wilayah administratifnya</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Masjid -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Masjid">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Pulo"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <rdfs:comment>Masjid Gedhe Kauman, atau yang dikenal juga sebagai Masjid Raya Yogyakarta, adalah masjid bersejarah yang menjadi ikon Keraton Yogyakarta. Dibangun pada tahun 1773 oleh Sultan Hamengkubuwono I</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Material -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Material">
+        <rdfs:comment>Class ini mencakup berbagai jenis material yang digunakan dalam pembangunan tempat bersejarah, seperti batu andesit, bata merah, atau kayu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Sejarah"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Orang -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Orang">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Pendiri"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Organisasi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Organisasi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Organisasi">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Pendiri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Pendiri -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Pendiri">
+        <rdfs:comment>Pendiri merujuk pada individu atau organisasi yang mendirikan suatu tempat bersejarah</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Penyambung -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Penyambung">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianStupa"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PuncakStupa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Sejarah"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TanggaCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok"/>
+        <rdfs:comment>Plengkung adalah sebuah struktur arsitektural berupa gerbang yang menghubungkan satu wilayah dengan wilayah lainnya</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Pongangan -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Pongangan">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenLuarBangunan"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Sumur"/>
+        <rdfs:comment>Pongangan adalah dermaga air dalam kompleks Taman Sari yang digunakan sebagai tempat berlabuhnya perahu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Pulo -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Pulo">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <rdfs:comment>merupakan sebuah bangunan yang berada di taman sari</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#PuncakStupa -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#PuncakStupa">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BagianStupa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Relief -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Relief">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#HiasanCandi"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Stupa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefBuddha -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefBuddha">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Relief"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefHindu"/>
+        <rdfs:comment>Merupakan relief yang terdapat pada candi borobudur,dan pada candi borobudur terdiri dari relirf  Dekoratif (ornamental) yang berjumlah 1.212 dan juga terdapat  relief naratif (berisi cerita) yang berjumlah 1.460</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefDekoratif -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefDekoratif">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefBuddha"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefNaratif"/>
+        <rdfs:comment>Relief yang berfungsi sebagai hiasan tanpa memiliki alur cerita atau narasi tertentu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefHindu -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefHindu">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Relief"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefNaratif -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefNaratif">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefBuddha"/>
+        <rdfs:comment>Relief yang menggambarkan kisah atau ajaran dalam bentuk rangkaian gambar berurutan</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Sejarah -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Sejarah">
+        <rdfs:comment>Class ini merepresentasikan catatan mengenai peristiwa yang telah terjadi di masa lalu dan memiliki dampak atau makna historis. Sejarah dapat berupa peristiwa konkret yang terjadi pada waktu tertentu (PeristiwaSejarah) atau nilai yang diberikan kepada suatu tempat atau objek berdasarkan signifikansi historisnya (NilaiSejarah)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural">
+        <rdfs:comment>Class ini mencakup berbagai struktur arsitektur yang ditemukan dalam tempat bersejarah, seperti bangunan utama, gerbang, dan menara dan lainnya</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Stupa -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Stupa">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#HiasanCandi"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagian"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#AlasStupa"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagian"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BadanStupa"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagian"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Penyambung"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiBagian"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PuncakStupa"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Bangunan Suci sebagai lambang agama buddha yang berbentuk mangkuk terbalik pada bangunan candi dan membentuk sebuah lonceng.
+memiliki fungsi : Digunakan sebagai tempat penyimpanan relik Buddha, sebagai tempat meditasi, sebagai kuil pemakaman bagi orang suci atau guru Buddha lainnya dan sebagai lambang identitas umat Buddha.
+Jumlah Stupa pada candi borobudur yaitu 73 Buah</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Sumur -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Sumur">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenLuarBangunan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#TanggaCandi -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#TanggaCandi">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+        <owl:disjointWith rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok">
+        <rdfs:subClassOf rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah -->
+
+    <owl:Class rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#TempatBersejarah">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#berlokasiDi"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiFungsiAsli"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiFungsiSekarang"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiGayaArsitektur"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#GayaArsitektur"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiKomponenBangunan"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiKomponenLuarBangunan"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenLuarBangunan"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiNilaiSejarah"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiPendiri"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Orang"/>
+                                    <rdf:Description rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#Organisasi"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiPeristiwaSejarah"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#memilikiStrukturArsitektural"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#terbuatDari"/>
+                        <owl:someValuesFrom rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Material"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class ini merepresentasikan tempat atau situs yang memiliki nilai sejarah, budaya, atau arkeologis, seperti candi, benteng, atau istana</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#alun_alun_selatan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#alun_alun_selatan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#AlunAlun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#alun_alun_utara -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#alun_alun_utara">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#AlunAlun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#anak_tangga -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#anak_tangga">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#TanggaCandi"/>
+        <rdfs:comment>Terdapat 360 anak tangga ( tersebar di semua sisi candi)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arca_adi_buddha -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_adi_buddha">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaBuddha"/>
+        <rdfs:comment>Adalah salah satu arca yang terdapat pada candi borobudur yang terdiri dari 1 buah. Arca ini terletak di Stupa Induk dan memiliki fungsi sebagai Simbol Tingkatan Spiritualitas dan Keagamaan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arca_agastya -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_agastya">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arca_angsa -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_angsa">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arca_durga -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_durga">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arca_dyani_buddha -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_dyani_buddha">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaBuddha"/>
+        <rdfs:comment>Adalah salah satu arca yang terdapat pada candi borobudur yang terdiri dari 504 buah.432  Arca Dyani Buddha terdapat di relung dinding (tingkat Rupadhatu),72 Arca Dyani Buddha terdapat di dalam stupa berlubang (tingkat Arupadhatu). Arca Dyani Buddha ini diletakan pada relung di segala penjuru mata angin</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arca_ganesha -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_ganesha">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arca_garuda -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_garuda">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arca_nandi -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_nandi">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arca_wisnu -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_wisnu">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaHindu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#arupadhatu -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#arupadhatu">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#AtapCandi"/>
+        <rdfs:comment>Melambangkan Simbol pencerahan tertinggi, bebas dari duniawi, simbol alam atas, tempat tertinggi yang dihuni oleh para dewa dan terletak di lantai 7-9</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bajralepa -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bajralepa">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Material"/>
+        <rdfs:comment>Bahan pendukung Pembuatan Candi (Dibuat dari campuran pasir vulkanik dan kapur halus ,tetapi digunakan untuk melapisi arca)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bale_angun_angun -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bale_angun_angun">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bale_bang -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bale_bang">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_kencana -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_kencana">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_manguntur_tangkil -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_manguntur_tangkil">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_pagelaran -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_pagelaran">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_pancaniti -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_pancaniti">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_siti_hinggil -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_siti_hinggil">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_sri_manganti -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_sri_manganti">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_witana -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_witana">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Bangsal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#batu_andesit -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#batu_andesit">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Material"/>
+        <rdfs:comment>Batu andesit digunakan untuk pondasi bangunan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#batu_bata_merah -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#batu_bata_merah">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Material"/>
+        <rdfs:comment>Batu bata merah digunakan untuk tembok atau benteng</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_baluwarti -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_baluwarti">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok"/>
+        <rdfs:comment>Benteng Baluwarti adalah benteng yang mengelilingi kawasan keratron Yogyakarta</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_keliling -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_keliling">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Tembok"/>
+        <rdfs:comment>Merupakan bagian utama dari struktur pertahanan yang dibangun oleh Belanda. Benteng ini memiliki bentuk persegi dengan tembok setinggi sekitar 5 meter dan ketebalan 1,5 meter, mengelilingi seluruh kompleks seluas kurang lebih 2.100 meter persegi. Di keempat sudutnya terdapat bastion atau menara pengintai yang berfungsi sebagai pos pengawasan. Awalnya, benteng ini dilengkapi dengan parit pertahanan, meskipun saat ini parit tersebut sudah tidak berair lagi.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_pertahanan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_pertahanan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_vredeburg -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_vredeburg">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksBenteng"/>
+        <berlokasiDi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_benteng_vredeburg"/>
+        <memilikiFungsiAsli rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_pertahanan"/>
+        <memilikiFungsiSekarang rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#museum_sejarah"/>
+        <memilikiGayaArsitektur rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_eropa_kolonial"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_1"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_2"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_3"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_4"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_guest_house"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_kantin"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_storage"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_bimbingan"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_konservasi"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_pameran"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_pengenalan"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_penyajian"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_perpustakaan"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_pertemuan"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_tu"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_visual"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_kolonialisme"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_perjuangan_nasional"/>
+        <memilikiPendiri rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#kolonial_belanda"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_benteng_vredeburg"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#serangan_umum_1_maret_1949"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_keliling"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_barat"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#batu_bata_merah"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#genteng_tanah_liat"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#kayu_jati"/>
+        <dikelolaOleh>Departemen Pendidikan dan Kebudayaan</dikelolaOleh>
+        <koordinatGeografis>7°48&apos;01.0&quot;S 110°21&apos;58.0&quot;E</koordinatGeografis>
+        <memilikiLuas>46.574 m2</memilikiLuas>
+        <noRegistrasi>34.71.K.01.0043</noRegistrasi>
+        <statusKepemilikan>Milik Kesultanan Ngayogyakarta Hadiningrat</statusKepemilikan>
+        <tahunPendirian>Tahun 1760</tahunPendirian>
+        <rdfs:comment>Benteng Vredeburg merupakan benteng peninggalan Belanda yang yang dibangun pada abad ke-18 di Yogyakarta dan  terletak di pusat Kota Yogyakarta, tepat di depan Gedung Agung dan Keraton Yogyakarta. Benteng ini awalnya dibangun pada tahun 1760 atas perintah Sultan Hamengkubuwono I sebagai bentuk pengamanan wilayah, namun kemudian diambil alih oleh Belanda dan digunakan sebagai markas militer mereka. Arsitekturnya mencerminkan gaya pertahanan kolonial khas Eropa dengan bangunan berbentuk persegi dan bastion di keempat sudutnya.
+Saat ini, Benteng Vredeburg berfungsi sebagai museum yang menyajikan diorama perjuangan bangsa Indonesia, khususnya di wilayah Yogyakarta. Koleksi yang ditampilkan menggambarkan berbagai peristiwa penting dalam sejarah nasional, mulai dari masa penjajahan hingga kemerdekaan. Tempat ini menjadi destinasi edukatif yang menarik bagi wisatawan yang ingin mengenal lebih dalam sejarah perjuangan rakyat Indonesia di masa lalu.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#bhurloka -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#bhurloka">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KakiCandi"/>
+        <rdfs:comment>Bhurloka merupakan bagian kaki pada candi prambanan yang melambangkan dunia manusia biasa</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#blumbang_kuras -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#blumbang_kuras">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian"/>
+        <rdfs:comment>merupakan Kolam Pemandian di Taman Sari</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#candi_apit -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_apit">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiPendamping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#candi_borobudur -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_borobudur">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiBuddha"/>
+        <berlokasiDi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_candi_borobudur"/>
+        <memilikiBagianCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arupadhatu"/>
+        <memilikiBagianCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#kamadhatu"/>
+        <memilikiBagianCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#rupadhatu"/>
+        <memilikiFungsiAsli rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ibadah_umat_buddha"/>
+        <memilikiFungsiAsli rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ziarah_umat_buddha"/>
+        <memilikiFungsiSekarang rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ikon_budaya_indonesia"/>
+        <memilikiFungsiSekarang rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#objek_wisata_sejarah"/>
+        <memilikiGayaArsitektur rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_buddha_jawa"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_adi_buddha"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_dyani_buddha"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#patung_penjaga"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_avadana"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_jataka"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_kala_makara"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_karmawibhangga"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_lalitavistara"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_makhluk_mitologi"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_motif_fauna"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_motif_flora"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#stupa_induk"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#stupa_teras"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#simbol_peradaban_kuno_nusantara"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#sumber_ilmu_pengetahuan_dan_sejarah"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#warisan_dunia"/>
+        <memilikiPendiri rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#raja_samaratungga"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ditemukan_kembali_oleh_raffles_1814"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_candi_borobudur"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pemugaran_besar_oleh_indonesia_dan_unesco"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#peristiwa_bom_borobudur_1985"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#anak_tangga"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bajralepa"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#batu_andesit"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#stuko"/>
+        <dikelolaOleh>PT Taman Wisata Candi Borobudur, Prambanan dan Ratu Boko</dikelolaOleh>
+        <koordinatGeografis>7°36′29″S 110°12′14″E</koordinatGeografis>
+        <memilikiLuas>2.500 m²</memilikiLuas>
+        <memilikiTinggi>35 m</memilikiTinggi>
+        <noRegistrasi>KB000341</noRegistrasi>
+        <statusKepemilikan>Milik Pemerintah</statusKepemilikan>
+        <tahunPendirian>780-825 Masehi</tahunPendirian>
+        <rdfs:comment>Candi Borobudur merupakan candi Buddha terbesar di dunia yang terletak di Magelang, Jawa Tengah, tidak jauh dari Yogyakarta. Dibangun pada abad ke-8 oleh Dinasti Syailendra, candi ini memiliki bentuk stupa berundak yang terdiri dari sembilan tingkat—enam tingkat persegi dan tiga tingkat melingkar. Struktur ini dipenuhi dengan lebih dari 2.600 panel relief dan 504 arca Buddha, yang menggambarkan ajaran serta perjalanan spiritual menuju pencerahan. Candi Borobudur juga telah ditetapkan sebagai warisan dunia oleh UNESCO. Setiap tahunnya, ribuan umat Buddha dari seluruh dunia datang ke sini untuk merayakan Hari Waisak. Candi ini bukan hanya menjadi tempat suci, tetapi juga pusat pembelajaran sejarah dan budaya yang tak ternilai. Lanskap sekitarnya yang indah serta keagungan arsitektur menjadikan Borobudur salah satu keajaiban dunia yang wajib dikunjungi.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#candi_brahma -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_brahma">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiTrimurti"/>
+        <memilikiTinggi>33 meter</memilikiTinggi>
+        <rdfs:comment>Candi ini terletak di sebelah selatan Candi Siwa dan menghadap ke timur</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#candi_prambanan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_prambanan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksCandiHindu"/>
+        <berlokasiDi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_candi_prambanan"/>
+        <memilikiBagianCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bhurloka"/>
+        <memilikiBagianCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#madhyaloka"/>
+        <memilikiBagianCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#swarloka"/>
+        <memilikiCandiPendamping rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_apit"/>
+        <memilikiCandiPendamping rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_wahana"/>
+        <memilikiCandiTrimurti rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_brahma"/>
+        <memilikiCandiTrimurti rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_siwa"/>
+        <memilikiCandiTrimurti rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_wisnu"/>
+        <memilikiFungsiAsli rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ritual_keagamaan_hindu"/>
+        <memilikiFungsiAsli rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_upacara_keagamaan"/>
+        <memilikiFungsiSekarang rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#objek_wisata_sejarah"/>
+        <memilikiFungsiSekarang rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ibadah"/>
+        <memilikiGayaArsitektur rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_hindu"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_agastya"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_angsa"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_durga"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_ganesha"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_garuda"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_nandi"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#arca_wisnu"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_kresnayana"/>
+        <memilikiHiasanCandi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_ramayana"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_keagamaan_hindu"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_warisan_dunia"/>
+        <memilikiPendiri rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#rakai_pikatan"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_candi_prambanan"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pemugaran_candi_prambanan"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#runtuhnya_candi_prambanan"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#batu_andesit"/>
+        <dikelolaOleh>PT Taman Wisata Candi Borobudur, Prambanan dan Ratu Boko</dikelolaOleh>
+        <koordinatGeografis>7°45′8″S 110°29′30″E</koordinatGeografis>
+        <memilikiLuas>39,8 Hektar</memilikiLuas>
+        <noRegistrasi>KB000072</noRegistrasi>
+        <statusKepemilikan>Milik Pemerintah</statusKepemilikan>
+        <tahunPendirian>850 Masehi</tahunPendirian>
+        <rdfs:comment>Candi Prambanan adalah kompleks candi Hindu terbesar di Indonesia yang terletak di perbatasan antara Provinsi Yogyakarta dan Jawa Tengah. Dibangun pada abad ke-9, candi ini didedikasikan untuk Trimurti, yaitu tiga dewa utama dalam kepercayaan Hindu: Brahma Sang Pencipta, Wisnu Sang Pemelihara, dan Siwa Sang Pelebur. Candi utama yang menjulang tinggi setinggi 47 meter adalah Candi Siwa, yang menjadi ikon dari kompleks ini. Prambanan merupakan warisan dunia UNESCO dan menjadi salah satu destinasi wisata unggulan di Indonesia. Selain menikmati keindahan arsitekturnya, pengunjung juga dapat menyaksikan pertunjukan seni seperti Sendratari Ramayana yang digelar secara berkala di pelataran candi. Keagungan dan keindahan ukiran relief yang menggambarkan kisah-kisah epik Hindu menjadi daya tarik utama kompleks ini.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#candi_siwa -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_siwa">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiTrimurti"/>
+        <memilikiTinggi>47 meter</memilikiTinggi>
+        <rdfs:comment>Candi ini terletak di tengah-tengah dan merupakan bangunan terbesar di kompleks Candi Prambanan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#candi_wahana -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_wahana">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiPendamping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#candi_wisnu -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#candi_wisnu">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#CandiTrimurti"/>
+        <memilikiTinggi>33 meter</memilikiTinggi>
+        <rdfs:comment>Candi ini terletak di sebelah utara Candi Siwa dan menghadap ke timur</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ditemukan_kembali_oleh_raffles_1814 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ditemukan_kembali_oleh_raffles_1814">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Candi Borobudur ditemukan kembali pada tahun 1814 oleh Sir Thomas Stamford Raffles, Gubernur Jenderal Inggris di Jawa saat itu. Raffles mendengar laporan tentang keberadaan candi yang tertutup oleh tanah dan vegetasi, lalu mengirim tim untuk menyelidiki situs tersebut</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ganta -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ganta">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BadanStupa"/>
+        <rdfs:comment>Bagian badan stupa. Bagian ini adalah bentuk utama stupa yang berbentuk kubah atau lonceng</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_agung -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_agung">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gapura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_gladhag -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_gladhag">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gapura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_pangurakan_lebet -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_pangurakan_lebet">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gapura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_pangurakan_njawi -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_pangurakan_njawi">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gapura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_buddha_jawa -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_buddha_jawa">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#GayaArsitektur"/>
+        <rdfs:comment>Menggabungkan unsur-unsur tradisi India, seperti stupa dan mandala, dengan unsur lokal Indonesia, seperti punden berundak dan Memiliki struktur candi yang dibagi menjadi tiga tingkatan yang melambangkan tiga ranah dalam ajaran Buddha </rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_eropa_kolonial -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_eropa_kolonial">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#GayaArsitektur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_hindu -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_hindu">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#GayaArsitektur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_jawa_portugis -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_jawa_portugis">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#GayaArsitektur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_blawang -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_blawang">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_madaran -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_madaran">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_pangunjukan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_pangunjukan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_sekawan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_sekawan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <rdfs:comment>Tempat istirahat untuk istri dan keluarga Sultan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_temanten -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_temanten">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <rdfs:comment>Tempat istirahat untuk istri dan keluarga Sultan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_1 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_1">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <lokasiBangunan>Gedung M3, Benteng Vredeburg</lokasiBangunan>
+        <rdfs:comment>Gedung ini dahulunya digunakan sebagai barak perwira dan pada awalnya secara garis besar memiliki fungsi yang sama sebagai bangunan tempat tinggal bagi perwira maupun prajurit yang telah memiliki keluarga</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_2 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_2">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <lokasiBangunan>Gedung M1, Benteng Vredebrug</lokasiBangunan>
+        <rdfs:comment>Gedung ini dahulunya digunakan sebagai barak perwira</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_3 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_3">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <lokasiBangunan>Lantai2, Gedung G, Benteng Vredebrug</lokasiBangunan>
+        <rdfs:comment>Gedung dua lantai ini dahulunya merupakan gedung barak prajurit sisi utara</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_4 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_diorama_4">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <lokasiBangunan>Lantai2, Gedung G, Benteng Vredebrug</lokasiBangunan>
+        <rdfs:comment>Gedung dua lantai ini dahulunya merupakan gedung barak prajurit</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_guest_house -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_guest_house">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <lokasiBangunan>Gedung N2, Benteng Vredebrug</lokasiBangunan>
+        <rdfs:comment>Gedung berlantai dua ini dahhulu lantai bawah diperkirakan digunakan sebagai gudang senjata, sedangkan lantai atas diperkirakan digunakan sebagai barak prajurit</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_jene -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_jene">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <rdfs:comment>Gedung yang digunakan untuk menjamu tamu Sri Sultan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_kantin -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_kantin">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <lokasiBangunan>Gedung L1, Benteng Vredebrug</lokasiBangunan>
+        <rdfs:comment>Dahulunya gedung ini digunakan sebagai rumah tahanan/sel</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_prabayeksa -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_prabayeksa">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <rdfs:comment>Merupakan ruang pertemuan pribadi dan tempat penyimpanan pusaka</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_storage -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_storage">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <lokasiBangunan>Gedung K, Benteng Vredebrug</lokasiBangunan>
+        <rdfs:comment>Gedung ini dahulunya dipakai sebagai Dapur Utara, sedangkan di sebelah barat daya benteng juga terdapat bangunan yang berfungsi sebagai Dapur Selatan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gempa_besar_1867 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gempa_besar_1867">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Gempa bumi tahun 1867 menyebabkan banyak bangunan di Taman Sari mengalami kerusakan parah,sejak saat itu sebagian besar kompleksnya tidak dipulihkan dan hanya tersisa beberapa bagian</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#genteng_tanah_liat -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#genteng_tanah_liat">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Material"/>
+        <rdfs:comment>Genteng tanah liat digunakan untuk atap bangunan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_barat -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_barat">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gerbang"/>
+        <rdfs:comment>Merupakan pintu utama sekaligus elemen arsitektur paling ikonik dari kompleks benteng peninggalan Belanda ini.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_kenari -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_kenari">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gerbang"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_timur -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_timur">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gerbang"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_utama_pesanggrahan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_utama_pesanggrahan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gerbang"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#harmika -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#harmika">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Penyambung"/>
+        <rdfs:comment>Merupakan bagian antara badan dan puncak yang memiliki berbentuk struktur persegi kecil di atas badan stupa</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ikon_budaya_indonesia -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ikon_budaya_indonesia">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#jawa_eropa -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#jawa_eropa">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#GayaArsitektur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#kamadhatu -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#kamadhatu">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KakiCandi"/>
+        <rdfs:comment>Melambangkan Kehidupan manusia yang masih terikat oleh nafsu duniawi dan hukum karma dan Terletak di Lantai 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#kayu_jati -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#kayu_jati">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Material"/>
+        <rdfs:comment>Kayu Jati digunakan untuk struktur utama bangunan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#kediaman_sultan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#kediaman_sultan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#keraton_yogyakarta -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#keraton_yogyakarta">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksKeraton"/>
+        <berlokasiDi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_keraton_yogyakarta"/>
+        <memilikiFungsiAsli rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#kediaman_sultan"/>
+        <memilikiFungsiSekarang rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#objek_wisata_sejarah"/>
+        <memilikiFungsiSekarang rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pusat_pemerintahan"/>
+        <memilikiGayaArsitektur rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gaya_arsitektur_jawa_portugis"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_jene"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedung_prabayeksa"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#masjid_gedhe_kauman"/>
+        <memilikiKomponenLuarBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#alun_alun_selatan"/>
+        <memilikiKomponenLuarBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#alun_alun_utara"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_budaya_jawa"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_pemerintahan_kesultanan"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_perjuangan_kemerdekaan"/>
+        <memilikiPendiri rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#sri_sultan_hamengku_buwono_1"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#perjanjian_giyanti_1755"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#serangan_umum_1_maret_1949"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bale_angun_angun"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bale_bang"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_kencana"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_manguntur_tangkil"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_pagelaran"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_pancaniti"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_siti_hinggil"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_sri_manganti"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#bangsal_witana"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_baluwarti"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_gladhag"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_pangurakan_lebet"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_pangurakan_njawi"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_jagabaya"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_jagasura"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_madyasura"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_nirbaya"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_tarunasura"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#batu_bata_merah"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#genteng_tanah_liat"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#kayu_jati"/>
+        <dikelolaOleh>Kesultanan Yogyakarta</dikelolaOleh>
+        <koordinatGeografis>7°48&apos;21.5&quot;S 110°21&apos;46.8&quot;E</koordinatGeografis>
+        <memilikiLuas>14.000 m2</memilikiLuas>
+        <noRegistrasi>RNCB.20100108.02.000177</noRegistrasi>
+        <statusKepemilikan>Milik Kasultanan Ngayogyakarta Hadiningrat</statusKepemilikan>
+        <tahunPendirian>tahun  1755</tahunPendirian>
+        <rdfs:comment>Keraton Ngayogyakarta Hadiningrat merupakan istana resmi Kesultanan Ngayogyakarta Hadiningrat yang terletak di Kota Yogyakarta, Daerah Istimewa Yogyakarta. Keraton ini didirikan oleh Sultan Hamengkubuwono I pada tahun 1755 sebagai hasil dari Perjanjian Giyanti yang membagi Kesultanan Mataram menjadi dua bagian: Kasunanan Surakarta dan Kesultanan Yogyakarta. Sejak saat itu, Keraton menjadi pusat pemerintahan sekaligus tempat tinggal resmi keluarga kerajaan. Arsitektur bangunan ini menggabungkan unsur tradisional Jawa dengan pengaruh budaya Eropa dan Islam, menciptakan kompleks yang kaya akan nilai historis, budaya, dan spiritual. Hingga kini, Keraton masih berfungsi sebagai tempat tinggal Sultan dan keluarganya, serta menjadi pusat pelestarian kebudayaan Jawa. Pengunjung dapat menyaksikan berbagai koleksi pusaka, gamelan, foto, dan artefak sejarah yang dipamerkan di dalam kompleks keraton. Beberapa bagian dari Keraton dibuka untuk umum dan menjadi destinasi wisata edukatif yang populer. Statusnya sebagai kawasan cagar budaya ditetapkan berdasarkan Surat Keputusan Gubernur No. 186/2011, yang menegaskan pentingnya pelestarian nilai-nilai budaya dan sejarah yang terkandung di dalamnya.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#kolonial_belanda -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#kolonial_belanda">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Organisasi"/>
+        <rdfs:comment>Merupakan sebuah organisasi belanda yang mendirikan Benteng Vredebrug dengan persetujuan dan di bawah pengawasan Sultan Hamengku Buwono I</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#lepa -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#lepa">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Material"/>
+        <rdfs:comment>lapisan atau plesteran yang digunakan untuk menutupi permukaan dinding agar halus</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_benteng_vredeburg -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_benteng_vredeburg">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi"/>
+        <memilikiAlamat>Jl. Margo Mulyo No.6, Ngupasan, Kec. Gondomanan, Kota Yogyakarta</memilikiAlamat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_candi_borobudur -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_candi_borobudur">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi"/>
+        <memilikiAlamat>Jalan Badrawati, Desa Borobudur, Kecamatan Borobudur, Kabupaten Magelang, Jawa Tengah, Indonesia</memilikiAlamat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_candi_prambanan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_candi_prambanan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi"/>
+        <memilikiAlamat>Jl. Raya Solo - Yogyakarta No.16, Kranggan, Bokoharjo, Kec. Prambanan, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55571</memilikiAlamat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_keraton_yogyakarta -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_keraton_yogyakarta">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi"/>
+        <memilikiAlamat>Jl. Rotowijayan Blok No. 1, Panembahan, Kecamatan Kraton, Kota Yogyakarta</memilikiAlamat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_taman_sari -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_taman_sari">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Lokasi"/>
+        <memilikiAlamat>Kelurahan Patehan, Kecamatan Kraton, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55133</memilikiAlamat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#madhyaloka -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#madhyaloka">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BadanCandi"/>
+        <rdfs:comment>Madhyaloka merupakan bagian badan candi pada candi pramaban,yang melambangkan dunia antara tempat orang suci</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#masjid_gedhe_kauman -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#masjid_gedhe_kauman">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Masjid"/>
+        <rdfs:comment>Merupakan tempat ibadah utama Kesultanan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#museum_sejarah -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#museum_sejarah">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang"/>
+        <rdfs:comment>Benteng Vredeburg telah dialihfungsikan menjadi Museum Benteng Vredeburg, yang menyajikan diorama dan pameran mengenai sejarah perjuangan bangsa Indonesia, khususnya terkait peristiwa-peristiwa penting di Yogyakarta</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_budaya_jawa -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_budaya_jawa">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>Menjadi pusat tradisi dan budaya Jawa</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_keagamaan_hindu -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_keagamaan_hindu">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>melambangkan kejayaan agama Hindu di Jawa</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_kolonialisme -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_kolonialisme">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>bukti penjajahan Belanda di Yogyakarta</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_pemerintahan_kesultanan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_pemerintahan_kesultanan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>melambangkan sistem pemerintahan kesultanan di Indonesia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_perjuangan_kemerdekaan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_perjuangan_kemerdekaan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>keraton sebagai pusat perjuangan dalam sejarah Indonesia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_perjuangan_nasional -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_perjuangan_nasional">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>menjadi saksi perlawanan rakyat Indonesia terhadap Belanda</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_sejarah_warisan_nasional -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_sejarah_warisan_nasional">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>Ditetapkan sebagai cagar budaya yang dilindungi oleh pemerintah</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_warisan_dunia -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_warisan_dunia">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>diakui UNESCO sebagai warisan dunia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#objek_wisata_sejarah -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#objek_wisata_sejarah">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#padmasana -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#padmasana">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#AlasStupa"/>
+        <rdfs:comment>Merupakan Kaki Stupa yang berfungsi sebagai pondasi atau dasar dari stupa</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pasareanL-ledoksari -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pasareanL-ledoksari">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Gedung"/>
+        <rdfs:comment>berfungsi sebagai tempat peristirahatan Sultan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pasiraman_garjitawati -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pasiraman_garjitawati">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pasiraman_naga -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pasiraman_naga">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#patung_penjaga -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#patung_penjaga">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ArcaPelindung"/>
+        <rdfs:comment>Patung penjaga sering disebut dengan arca dwarapala. Patung penjaga ini terdapat pada candi borobudur yang terdiri dari 32 buah yang terletak di pintu masuk atau tangga untuk menunjukkan arah masuk ke area sakral candi dan memiliki fungsi sebagai Pelindung Candi (untuk menjaga tempat suci dari pengaruh jahat dan memberikan perlindungan spiritual bagi pengunjung yang datang).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_benteng_vredeburg -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_benteng_vredeburg">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Pembangunan Benteng Vredeburg dimulai pada tahun 1760 oleh Pemerintah Kolonial Belanda atas izin Sultan Hamengkubuwono I. Benteng ini awalnya dibangun sebagai pos pengawasan terhadap Kesultanan Yogyakarta, dengan desain arsitektur khas benteng Eropa yang dilengkapi dengan bastion di setiap sudutnya. Benteng ini kemudian berkembang menjadi pusat pertahanan dan administrasi Belanda di Yogyakarta</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_candi_borobudur -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_candi_borobudur">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Pembangunan Candi Borobudur diperkirakan berlangsung antara sekitar tahun 780 hingga 825 M pada masa Dinasti Syailendra. Proses konstruksi dipimpin oleh para arsitek dan pemahat batu dari kerajaan Mataram Kuno</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_candi_prambanan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_candi_prambanan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Pembangunan Candi Prambanan terjadi pada abad ke-9 Masehi oleh Rakai Pikatan dari Wangsa Sanjaya sebagai persembahan bagi Trimurti dalam agama Hindu, yaitu Brahma, Wisnu, dan Siwa</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_taman_sari -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_taman_sari">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Pembangunan Taman Sari dimulai pada tahun 1758 pada masa Sultan Hamengkubuwono I dengan bantuan arsitek Portugis, Demang Tegis, dan dirancang sebagai tempat rekreasi kerajaan, benteng pertahanan tersembunyi, serta tempat peribadatan, namun mengalami kerusakan akibat gempa bumi besar pada tahun 1867</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pemugaran_besar_oleh_indonesia_dan_unesco -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pemugaran_besar_oleh_indonesia_dan_unesco">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Proyek pemugaran besar Candi Borobudur yang dilakukan oleh Pemerintah Indonesia dengan bantuan UNESCO antara tahun 1973 hingga 1983. Pemugaran ini bertujuan untuk menyelamatkan struktur candi dari kerusakan akibat erosi, pelapukan, dan ketidakstabilan fondasi</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pemugaran_candi_prambanan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pemugaran_candi_prambanan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Pemugaran Candi Prambanan dimulai pada abad ke-20 oleh pemerintah kolonial Belanda dan dilanjutkan oleh pemerintah Indonesia setelah kemerdekaan. Proses rekonstruksi utama dimulai tahun 1937 dan terus berlangsung hingga saat ini untuk menjaga kelestarian candi sebagai warisan budaya dunia UNESCO</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#peristiwa_bom_borobudur_1985 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#peristiwa_bom_borobudur_1985">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Pada 21 Januari 1985, serangkaian ledakan bom terjadi di Candi Borobudur, menyebabkan kerusakan pada beberapa stupa. Serangan ini dilakukan oleh kelompok ekstremis, dan beberapa pelaku kemudian ditangkap serta diadili oleh pihak berwenang Indonesia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#perjanjian_giyanti_1755 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#perjanjian_giyanti_1755">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Perjanjian Giyanti yang ditandatangani pada 13 Februari 1755 merupakan kesepakatan yang membagi Kesultanan Mataram menjadi dua, yaitu Kesultanan Yogyakarta di bawah Sultan Hamengkubuwono I dan Kasunanan Surakarta di bawah Pakubuwono III. Perjanjian ini menjadi tonggak berdirinya Keraton Yogyakarta dan menandai berakhirnya konflik internal di Mataram akibat campur tangan VOC</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_jagabaya -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_jagabaya">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_jagasura -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_jagasura">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_madyasura -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_madyasura">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_nirbaya -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_nirbaya">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_tarunasura -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#plengkung_tarunasura">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Plengkung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pongangan_peksi_beri -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pongangan_peksi_beri">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Pongangan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pulo_kenanga -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pulo_kenanga">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Pulo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pulo_panembung -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pulo_panembung">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Pulo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#pusat_pemerintahan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#pusat_pemerintahan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#raja_samaratungga -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#raja_samaratungga">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Orang"/>
+        <rdfs:comment>Merupakan pendiri dari Candi Borobudur</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#rakai_pikatan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#rakai_pikatan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Orang"/>
+        <rdfs:comment>Merupakan pendiri dari Candi Prambanan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_avadana -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_avadana">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefNaratif"/>
+        <rdfs:comment>Mengisahkan cerita yang sama dengan Jataka. Hanya saja pelaku utama dalam cerita di Relief Avadana bukan Sang Boddhisattva melainkan tokoh lainnya. Tokoh itu bisa manusia atau hewan yang biasanya bukan jelmaan Boddhisattva. Relief ini terdiri dari ±800</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_bhadracari -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_bhadracari">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefNaratif"/>
+        <rdfs:comment>Mengisahkan usaha Sudhana untuk mencapai kebuddhaan dengan berguru pada Boddhisatva Maitreya dan Boddhisatva Samanthabhadra.Relief ini terdiri dari ±460</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_gandavyuha -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_gandavyuha">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefNaratif"/>
+        <rdfs:comment>Mengisahkan tentang pengembaraan Sudhana dari satu guru ke guru lain untuk mencapai kebuddhaan. Relief ini terdiri dari ±460</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_jataka -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_jataka">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefNaratif"/>
+        <rdfs:comment>Mengisahkan kisah tentang Boddhisattva yang mengalami kelahiran berulang kali dalam berbagai wujud untuk membantu manusia mencapai jalan kebuddhaan.Relief ini terdiri dari ±800</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_kala_makara -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_kala_makara">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefDekoratif"/>
+        <rdfs:comment>Menggambarkan  wajah raksasa Kala dan makhluk mitologi Makara dan terdapat di pintu dan gerbang, sebagai pelindung dari energi negatif</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_karmawibhangga -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_karmawibhangga">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefNaratif"/>
+        <rdfs:comment>Mengisahkan perbuatan-perbuatan manusia yang mengandung kebajikan maupun kejahatan, serta segala akibat dari melakukannya. Relief ini terdiri dari ±160</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_kresnayana -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_kresnayana">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefHindu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_lalitavistara -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_lalitavistara">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefNaratif"/>
+        <rdfs:comment>Mengisahkan kehidupan Sang Buddha di Surga Tushita hingga menyampaikan khotbah pertama di Taman Rusa.Relief ini terdiri dari ±120</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_makhluk_mitologi -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_makhluk_mitologi">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefDekoratif"/>
+        <rdfs:comment>Menggambarkan makhluk mitologi, dewa-dewi, dan tokoh spiritual dan terdapat di dinding dan langkan pada tingkat Rupadhatu (empat tingkat tengah)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_motif_fauna -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_motif_fauna">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefDekoratif"/>
+        <rdfs:comment>Menggambarkan hewan mitologi seperti singa (Dvarapala), garuda, naga, gajah, burung, dan ikan dan melambangkan  kekuatan, perlindungan, dan kebijaksanaan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_motif_flora -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_motif_flora">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefDekoratif"/>
+        <rdfs:comment>Menggambarkan ukiran bunga teratai, dedaunan, dan sulur-suluran dan melambangkan kesucian dan kehidupan dalam kosmologi Buddha</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#relief_ramayana -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#relief_ramayana">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ReliefHindu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_bimbingan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_bimbingan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <terletakDi>Gedung J, Benteng Vredeburg</terletakDi>
+        <rdfs:comment>Ruangan ini dahulunya merupakan ruangan tempat perlengkapan non-militer/logistik</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_konservasi -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_konservasi">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <terletakDi>Gedung N1,Benteng Vredebrug</terletakDi>
+        <rdfs:comment>Ruang ini dahulu diperkirakan digunakan sebagai gudang senjata, kantor administrasi gudang, dan tempat perawatan senjata</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_pameran -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_pameran">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <terletakDi>Lantai 2, Gedung E, Benteng Vredeburg</terletakDi>
+        <rdfs:comment>Merupakan salah satu area utama yang berfungsi sebagai sarana edukasi dan pemajangan koleksi sejarah. Ruangan ini terletak di dalam kompleks benteng, memanfaatkan struktur bangunan asli peninggalan Belanda yang telah dipugar dengan tetap mempertahankan karakter arsitekturnya</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_pengenalan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_pengenalan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <terletakDi>Ruang C1, Benteng Vredebrug</terletakDi>
+        <rdfs:comment>Dahulu, ruangan ini diperkirakan digunakan sebagai kantor administrasi benteng</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_penyajian -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_penyajian">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <terletakDi>Lantai 1, Gedung F, Benteng Vredeburg</terletakDi>
+        <rdfs:comment>Gedung dua lantai ini dahulunya diperkirakan digunakan sebagai tempat fasilitas umum bagi para penghuni benteng</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_perpustakaan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_perpustakaan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <terletakDi>Gedung J, Benteng Vredebrug</terletakDi>
+        <rdfs:comment>Ruangan ini dahulunya merupakan ruangan tempat perlengkapan non-militer/logistik</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_pertemuan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_pertemuan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <terletakDi>Lantai 2, Gedung G, Benteng Vredeburg</terletakDi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_tu -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_tu">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <terletakDi>Gedung M4, Benteng Vredebrug</terletakDi>
+        <rdfs:comment>Dahulu, gedung ini diperkirakan digunakan sebagai barak perwira dengan pangkat tertinggi</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_visual -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#ruang_visual">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Ruangan"/>
+        <terletakDi>Lantai 2, Gedung F, Benteng Vredeburg</terletakDi>
+        <rdfs:comment>Merupakan sebuah ruang pameran modern yang memadukan teknologi digital dengan penyajian sejarah interaktif.Ruang ini menampilkan berbagai konten visual berupa proyeksi mapping, layar sentuh interaktif, dan film dokumenter berkualitas tinggi yang mengisahkan sejarah Benteng Vredeburg</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#runtuhnya_candi_prambanan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#runtuhnya_candi_prambanan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Candi Prambanan mengalami keruntuhan akibat serangkaian gempa bumi dan letusan Gunung Merapi, terutama pada abad ke-16. Runtuhnya struktur ini menyebabkan candi tertutup oleh reruntuhan dan tanah, hingga akhirnya ditemukan kembali oleh peneliti pada abad ke-19</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#rupadhatu -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#rupadhatu">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#BadanCandi"/>
+        <rdfs:comment>Melambangkan Perjalanan spiritual manusia yang mulai meninggalkan hawa nafsu, tetapi masih terikat dunia bentuk dan terletak di Lantai 2-6</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#serangan_umum_1_maret_1949 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#serangan_umum_1_maret_1949">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PeristiwaSejarah"/>
+        <rdfs:comment>Serangan Umum 1 Maret 1949 adalah operasi militer yang dilakukan oleh Tentara Nasional Indonesia (TNI) di bawah komando Letkol Soeharto, dengan dukungan Sultan Hamengkubuwono IX, untuk merebut kembali Kota Yogyakarta dari tangan Penjajah</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#simbol_peradaban_kuno_nusantara -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#simbol_peradaban_kuno_nusantara">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>Candi Borobudur merupakan simbol kejayaan peradaban kuno Nusantara, mencerminkan kemajuan arsitektur, seni, dan spiritualitas masyarakat Mataram Kuno pada abad ke-8 hingga ke-9 M. Struktur ini mencerminkan konsep mandala dan ajaran Buddhisme Mahayana</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#sri_sultan_hamengku_buwono_1 -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#sri_sultan_hamengku_buwono_1">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Orang"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#stuko -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#stuko">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Material"/>
+        <rdfs:comment>Bahan pendukung Pembuatan Candi (Campuran tumbukan batu dan pasir ,Digunakan untuk melapisi arca dan relief)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#stupa_induk -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#stupa_induk">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Stupa"/>
+        <memilikiBagian rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#ganta"/>
+        <memilikiBagian rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#harmika"/>
+        <memilikiBagian rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#padmasana"/>
+        <memilikiBagian rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#yasti"/>
+        <memilikiBentuk>Menyerupai genta atau lonceng yang besar pada bagian bawah lalu mengecil pada bagian atasnya</memilikiBentuk>
+        <rdfs:comment>Stupa induk adalah stupa terbesar yang terletak pada bagian puncak candi dan menjadi stupa terbesar di Candi Borobudur dan hanya terdapat 1 Buah di candi Borobudur
+Memiliki diameter 9,9 meter, tinggi 7 meter, dan berada pada ketinggian 42 meter di atas tanah.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#stupa_teras -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#stupa_teras">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Stupa"/>
+        <memilikiBentuk>Menyerupai genta atau lonceng yang besar pada bagian bawah lalu mengecil pada bagian atasnya dan berlubang-lubang seperti sebuah kurungan</memilikiBentuk>
+        <rdfs:comment>stupa yang lebih kecil dari stupa induk yang terletak pada bagian teras candi yang mengelilingi stupa induk dan terdiri dari 72 Buah.32 stupa pada teras melingkar I, 24 stupa pada teras melingkar II, 16 stupa pada teras melingkar III</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#sumber_ilmu_pengetahuan_dan_sejarah -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#sumber_ilmu_pengetahuan_dan_sejarah">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>Candi Borobudur merupakan sumber ilmu pengetahuan dan sejarah yang kaya, memberikan wawasan tentang arsitektur kuno, seni relief, ajaran Buddhisme, serta kehidupan sosial pada masa Mataram Kuno. Penelitian terhadap candi ini membantu memahami perkembangan budaya dan interaksi antarperadaban di Nusantara</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#sumur_gumuling -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#sumur_gumuling">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#Sumur"/>
+        <rdfs:comment>dahulunya bangunan ini adalah tempat ibadah atau menyangkut kepentingan religius</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#swarloka -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#swarloka">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#AtapCandi"/>
+        <rdfs:comment>Swarloka merupakan bagian atap candi pada candi pramaban yang melambangkan dunia para dewa</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#taman_sari -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#taman_sari">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KompleksTamanKeraton"/>
+        <bagianDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#keraton_yogyakarta"/>
+        <berlokasiDi rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#lokasi_taman_sari"/>
+        <memilikiFungsiAsli rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#benteng_pertahanan"/>
+        <memilikiFungsiAsli rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_rekreasi_keluarga_keraton"/>
+        <memilikiFungsiSekarang rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#objek_wisata_sejarah"/>
+        <memilikiGayaArsitektur rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#jawa_eropa"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_blawang"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_madaran"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_pangunjukan"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gedhong_temanten"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pulo_kenanga"/>
+        <memilikiKomponenBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pulo_panembung"/>
+        <memilikiKomponenLuarBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pongangan_peksi_beri"/>
+        <memilikiKomponenLuarBangunan rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#sumur_gumuling"/>
+        <memilikiNilaiSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#nilai_sejarah_warisan_nasional"/>
+        <memilikiPendiri rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#sri_sultan_hamengku_buwono_1"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gempa_besar_1867"/>
+        <memilikiPeristiwaSejarah rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pembangunan_taman_sari"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#blumbang_kuras"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gapura_agung"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_kenari"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#gerbang_utama_pesanggrahan"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pasiraman_garjitawati"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#pasiraman_naga"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#umbul_binangun"/>
+        <memilikiStrukturArsitektural rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#umbul_muncar"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#batu_bata_merah"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#kayu_jati"/>
+        <terbuatDari rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#lepa"/>
+        <dikelolaOleh>Departemen Pendidikan dan Kebudayaan</dikelolaOleh>
+        <koordinatGeografis>7°48&apos;35.7&quot;S 110°21&apos;32.4&quot;E</koordinatGeografis>
+        <memilikiLuas>2,66 Hektar</memilikiLuas>
+        <noRegistrasi>3471091001.4.2021.66</noRegistrasi>
+        <statusKepemilikan>milik Kesultanan Ngayogyakarta Hadiningrat</statusKepemilikan>
+        <tahunPendirian>tahun 1758</tahunPendirian>
+        <rdfs:comment>Taman Sari adalah bekas taman kerajaan Kesultanan Yogyakarta yang dibangun pada abad ke-18 oleh Sultan Hamengkubuwono I. Terletak tidak jauh dari kompleks Keraton, Taman Sari dulunya digunakan sebagai tempat peristirahatan, meditasi, serta kolam pemandian keluarga kerajaan. Arsitekturnya memadukan unsur Jawa, Portugis, dan Belanda, menciptakan suasana yang unik dan elegan. Saat ini, Taman Sari menjadi situs wisata sejarah yang populer di Yogyakarta. Wisatawan dapat menjelajahi lorong-lorong bawah tanah, menara pandang, serta sisa-sisa bangunan kolam pemandian yang masih terawat. Meski sebagian bangunan telah rusak, nuansa mistis dan nilai sejarahnya tetap kuat terasa, menjadikan Taman Sari sebagai salah satu destinasi favorit di kota budaya ini.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ibadah -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ibadah">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiSekarang"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ibadah_umat_buddha -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ibadah_umat_buddha">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_rekreasi_keluarga_keraton -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_rekreasi_keluarga_keraton">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ritual_keagamaan_hindu -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ritual_keagamaan_hindu">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_upacara_keagamaan -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_upacara_keagamaan">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ziarah_umat_buddha -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#tempat_ziarah_umat_buddha">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#FungsiAsli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#umbul_binangun -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#umbul_binangun">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#umbul_muncar -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#umbul_muncar">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#KolamPemandian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#warisan_dunia -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#warisan_dunia">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#NilaiSejarah"/>
+        <rdfs:comment>Candi Borobudur diakui sebagai Warisan Dunia oleh UNESCO pada tahun 1991. Sejak itu, candi ini terus dijaga dan dipelihara oleh pemerintah Indonesia dan komunitas internasional untuk melestarikan nilai sejarah, budaya, dan spiritualnya</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ukdw.ac.id/ontologi/tempatbersejarah#yasti -->
+
+    <owl:NamedIndividual rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#yasti">
+        <rdf:type rdf:resource="http://ukdw.ac.id/ontologi/tempatbersejarah#PuncakStupa"/>
+        <rdfs:comment>Merupakan bagian puncak yang berbentuk tongkat atau tiang yang menjulang ke atas. Kadang dilengkapi dengan chattra (payung bertingkat)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenBangunan"/>
+            <rdf:Description rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#KomponenLuarBangunan"/>
+            <rdf:Description rdf:about="http://ukdw.ac.id/ontologi/tempatbersejarah#StrukturArsitektural"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
