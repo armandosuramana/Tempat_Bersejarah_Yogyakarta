@@ -51,6 +51,7 @@ export default {
 
         SELECT DISTINCT ?gapura
         WHERE {
+           tb:taman_sari tb:memilikiStrukturArsitektural ?gapura .
           ?gapura rdf:type tb:Gapura .
         }
       `;

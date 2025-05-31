@@ -52,7 +52,8 @@ export default {
 
         SELECT DISTINCT ?gapura
         WHERE {
-          ?gapura rdf:type tb:Gapura.
+           tb:keraton_yogyakarta tb:memilikiStrukturArsitektural ?gapura .
+          ?gapura rdf:type tb:Gapura .
         }
       `;
 
