@@ -329,9 +329,8 @@ export default {
 }
 
 .custom-link {
-  color: #2c3e50;
-  text-decoration: none;
-  font-weight: bold;
+  color: blue;
+  text-decoration: underline;
 }
 
 .custom-link:hover {
