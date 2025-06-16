@@ -170,6 +170,8 @@ export default {
   mounted() {
     this.fetchDbpediaDescription(); // Mengambil data dari DBpedia menggunakan SPARQL endpoint
 
+
+    //Pengambilan data dari fuseki
     const endpoint = 'http://localhost:3030/TempatBersejarah/query';
     const query = `
       PREFIX tb: <http://ukdw.ac.id/ontologi/tempatbersejarah#>
@@ -254,42 +256,53 @@ export default {
   }
 };
 </script>
-
 <style scoped>
+/* Wrapper dan content utama */
 .wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #f9f9f9;
+  justify-content: center;
+  background: #f0f4f8;
   min-height: 100vh;
-  padding: 30px 15px;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2e3a59;
 }
 
 .content {
+  max-width: 900px;
   width: 100%;
-  max-width: 1000px;
   background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.title {
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 20px;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
 }
 
+/* Judul utama */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a2a6c;
+  letter-spacing: 0.04em;
+}
+
+/* Gambar utama */
 .main-image {
   width: 100%;
-  max-height: 400px;
+  max-height: 420px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 25px;
-}
-
-.details {
+  border-radius: 12px;
   margin-bottom: 30px;
-  font-size: 16px;
+
+}
+/* Section Deskripsi dan paragraf */
+.details {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444d6e;
+  margin-bottom: 40px;
 }
 
 .justify-text {
@@ -297,22 +310,40 @@ export default {
 }
 
 .spaced-text {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-style: normal;
+  color: #555a75;
 }
 
+/* Informasi detail seperti dibangun oleh, lokasi, dll */
+.details p strong {
+  color: #1a2a6c;
+}
+
+/* Bagian info section */
 .info-section {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .info-section h3,
 .info-section h2 {
-  font-size: 19px;
-  margin-bottom: 10px;
-  color: #2c3e50;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #23395d;
+  border-bottom: 2px solid #1a2a6c;
+  padding-bottom: 6px;
 }
 
+/* List dalam info section */
 .info-section ul {
   padding-left: 20px;
   list-style-type: disc;
+  color: #3a4a72;
+}
+
+.info-section ul li {
+  margin-bottom: 14px;
+  line-height: 1.5;
 }
 </style>

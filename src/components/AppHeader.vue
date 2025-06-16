@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container">
-      <h1>Tempat Bersejarah di Yogyakarta</h1>
+      <h1>Tempat Bersejarah Di Yogyakarta</h1>
       <nav>
         <button @click="goHome">Home</button>
         <button @click="goToVisualisasi">Visualisasi</button>
@@ -49,7 +49,7 @@ const goToAbout = () => {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   margin: 0;
 }

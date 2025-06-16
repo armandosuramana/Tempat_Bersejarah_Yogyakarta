@@ -6,7 +6,6 @@
 
       <section class="details">
         <h3>Deskripsi Singkat:</h3>
-        <!-- Deskripsi dari DBpedia  -->
         <p v-if="deskripsiDbpedia" class="justify-text spaced-text"><em>{{ deskripsiDbpedia }}</em></p>
         <p v-for="(para, idx) in deskripsiList" :key="idx" class="justify-text spaced-text">
           {{ para }}
@@ -23,9 +22,9 @@
       <section v-for="(items, kategori) in filteredGroupedData" :key="kategori" class="info-section">
         <h3>{{ kategori }}</h3>
         <ul>
-          <li v-for="(item, idx) in items" :key="idx">
-            <strong>{{ formatName(item.nama) }}</strong>
-            <span v-if="item.komentar"> - {{ item.komentar }}</span>
+          <li v-for="(item, idx) in items" :key="idx" class="info-item">
+            <div class="item-nama">{{ formatName(item.nama) }}</div>
+            <div v-if="item.komentar" class="item-komentar">{{ item.komentar }}</div>
           </li>
         </ul>
       </section>
@@ -49,7 +48,7 @@ export default {
   data() {
     return {
       deskripsiList: [],
-      deskripsiDbpedia: '', // Tambahkan properti untuk menyimpan deskripsi dari DBpedia
+      deskripsiDbpedia: '',
       groupedData: {}
     };
   },
@@ -66,7 +65,6 @@ export default {
     },
     async fetchDbpediaData() {
       try {
-        // Coba ambil data dari SPARQL endpoint terlebih dahulu
         const sparqlResponse = await this.fetchFromSparql();
         if (sparqlResponse) {
           this.deskripsiDbpedia = sparqlResponse.abstract;
@@ -74,15 +72,12 @@ export default {
           return;
         }
 
-        // Jika SPARQL gagal, coba ambil dari JSON API
         const jsonResponse = await this.fetchFromJson();
         if (jsonResponse) {
           this.deskripsiDbpedia = jsonResponse.abstract;
           this.koleksi = jsonResponse.collection;
         }
-      } catch (error) {
-        // Tidak melakukan apa-apa jika gagal, data lokal tetap akan ditampilkan
-      }
+      } catch (error) {console.error('Gagal fetch DBpedia:', error);}
     },
     async fetchFromSparql() {
       try {
@@ -90,16 +85,14 @@ export default {
           PREFIX dbo: <http://dbpedia.org/ontology/>
           SELECT ?abstract ?collection WHERE {
             <http://dbpedia.org/resource/Fort_Vredeburg_Museum> 
-              dbo:abstract ?abstract ;
+              dbo:abstract ?abstract .
             FILTER(LANG(?abstract) = "en")
           }
         `;
-
         const response = await axios.get('https://dbpedia.org/sparql', {
           params: { query, format: 'json' },
           headers: { 'Accept': 'application/sparql-results+json' }
         });
-
         const bindings = response.data.results.bindings;
         if (bindings && bindings.length > 0) {
           return {
@@ -107,7 +100,7 @@ export default {
             collection: bindings[0].collection?.value || ''
           };
         }
-      } catch (error) {
+      } catch {
         return null;
       }
       return null;
@@ -117,21 +110,18 @@ export default {
         const response = await axios.get('https://dbpedia.org/data/Fort_Vredeburg_Museum.json');
         const data = response.data;
         const subjectUri = 'http://dbpedia.org/resource/Fort_Vredeburg_Museum';
-        
         const abstract = data[subjectUri]?.['http://dbpedia.org/ontology/abstract'];
         return {
           abstract: abstract?.find(entry => entry.lang === 'en')?.value || ''
         };
-      } catch (error) {
+      } catch {
         return null;
       }
     }
   },
   mounted() {
-    // Ambil data dari DBpedia
     this.fetchDbpediaData();
 
-    // Ambil data dari endpoint lokal 
     const endpoint = 'http://localhost:3030/TempatBersejarah/query';
     const query = `
       PREFIX tb: <http://ukdw.ac.id/ontologi/tempatbersejarah#>
@@ -234,43 +224,46 @@ export default {
 <style scoped>
 .wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #f4f6f8;
+  justify-content: center;
+  background: #f0f4f8;
   min-height: 100vh;
-  padding: 30px 20px;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2e3a59;
 }
 
 .content {
+  max-width: 900px;
   width: 100%;
-  max-width: 1000px;
   background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 32px;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
-  color: #2c3e50;
-  font-weight: bold;
+  color: #1a2a6c;
+  letter-spacing: 0.04em;
 }
 
 .main-image {
   width: 100%;
-  max-height: 400px;
+  max-height: 420px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
 }
 
 .details {
-  margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
-  color: #333;
+  color: #444d6e;
+  margin-bottom: 40px;
 }
 
 .justify-text {
@@ -278,21 +271,27 @@ export default {
 }
 
 .spaced-text {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-style: normal;
+  color: #555a75;
+}
+
+.details p strong {
+  color: #1a2a6c;
 }
 
 .info-section {
   margin-top: 30px;
 }
 
-.info-section h3 {
-  font-size: 19px;
-  margin-bottom: 10px;
-  color: #34495e;
-}
-
+.info-section h3,
 .info-section h2 {
+  font-weight: 600;
   font-size: 20px;
+  margin-bottom: 15px;
+  color: #23395d;
+  border-bottom: 2px solid #1a2a6c;
+  padding-bottom: 6px;
 }
 
 .info-section ul {
@@ -300,9 +299,21 @@ export default {
   list-style-type: disc;
 }
 
-.info-section ul li {
-  margin-bottom: 8px;
-  line-height: 1.5;
-  font-size: 16px;
+.info-item {
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #2e3a59;
+}
+
+.item-nama {
+  font-weight: normal;
+  color: #2e3a59;
+}
+
+.item-komentar {
+  margin-top: 5px;
+  font-size: 15.5px;
+  color: #444d6e;
+  line-height: 1.6;
 }
 </style>

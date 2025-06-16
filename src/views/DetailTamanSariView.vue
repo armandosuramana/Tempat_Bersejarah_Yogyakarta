@@ -164,6 +164,7 @@ export default {
   mounted() {
     this.fetchDbpediaDescription(); // Mengambil data dari DBpedia menggunakan SPARQL endpoint
 
+    //Pengambilan data dari fuseki
     const endpoint = 'http://localhost:3030/TempatBersejarah/query';
     const query = `
       PREFIX tb: <http://ukdw.ac.id/ontologi/tempatbersejarah#>
@@ -263,43 +264,55 @@ export default {
   }
 };
 </script>
-
 <style scoped>
-/* Styling untuk wrapper halaman */
+/* Wrapper utama */
 .wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #f9f9f9;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f9fafb;
   min-height: 100vh;
-  padding: 30px 15px;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
 }
 
+/* Konten tengah */
 .content {
+  max-width: 920px;
   width: 100%;
-  max-width: 1000px;
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.title {
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 20px;
+  background: #fff;
+  padding: 35px 45px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
 }
 
+/* Judul Halaman */
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e2d7d;
+  letter-spacing: 0.03em;
+}
+
+/* Gambar Utama */
 .main-image {
   width: 100%;
-  max-height: 400px;
+  max-height: 440px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 25px;
+  border-radius: 14px;
+  margin-bottom: 30px;
 }
 
+/* Deskripsi umum */
 .details {
-  margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 40px;
 }
 
 .justify-text {
@@ -307,22 +320,37 @@ export default {
 }
 
 .spaced-text {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  color: #5c6678;
 }
 
+/* Penekanan strong pada paragraf detail */
+.details p strong {
+  color: #1e2d7d;
+}
+
+/* Info-section: Bagian seperti fungsi, gaya arsitektur, sejarah, dll */
 .info-section {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
-.info-section h3,
-.info-section h2 {
-  font-size: 19px;
-  margin-bottom: 10px;
-  color: #2c3e50;
+.info-section h2,
+.info-section h3 {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #1f2937;
+  border-bottom: 2px solid #1e2d7d;
+  padding-bottom: 6px;
 }
 
 .info-section ul {
   padding-left: 20px;
   list-style-type: disc;
+  color: #374151;
+}
+
+.info-section ul li {
+  margin-bottom: 12px;
 }
 </style>
