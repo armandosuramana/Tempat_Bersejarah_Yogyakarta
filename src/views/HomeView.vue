@@ -3,7 +3,7 @@
     <h2 class="title">Daftar Tempat Bersejarah</h2>
 
     <div class="places"> <!-- Grid untuk semua tempat -->
-      <div v-for="place in filteredPlaces" :key="place.name"> <!-- Loop data tempat -->
+      <div v-for="place in places" :key="place.name"> <!-- Loop data tempat -->
         <img v-if="place.image" :src="place.image" :alt="place.name" class="main-image" /> <!-- Tampilkan gambar jika tersedia -->
         <h2 class="place-name">{{ place.name }}</h2> <!-- Menampilkan nama tempat -->
         <button class="detail-btn" @click="showDetails(place.name)"> <!-- Tombol ke halaman detail -->
@@ -16,8 +16,8 @@
 
 <script setup>
 // Import fungsi dari Vue dan library lain yang dibutuhkan
-import { ref, onMounted, computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import axios from 'axios'
 
 // State untuk menyimpan data tempat bersejarah
@@ -25,7 +25,6 @@ const places = ref([])
 
 // Router untuk navigasi halaman
 const router = useRouter()
-const route = useRoute() // Mengakses parameter dari URL (misalnya ?search=keraton)
 
 // Ambil data dari Fuseki ketika komponen di-mount
 onMounted(async () => {
@@ -56,8 +55,7 @@ onMounted(async () => {
       }
     })
 
-    const results = response.data.results.bindings
-
+    const results = response.data.results.bindings //Mengambil hasil query dari Fuseki SPARQL dalam format JSON
     const uniqueMap = new Map()
 
     // Proses hasil query menjadi format array yang dapat ditampilkan
@@ -78,18 +76,6 @@ onMounted(async () => {
   } catch (error) {
     console.error('Gagal ambil data dari Fuseki:', error)
   }
-})
-
-// Ambil query pencarian dari URL (?search=...)
-const searchQuery = computed(() => route.query.search || '')
-
-// Filter tempat berdasarkan input pencarian
-const filteredPlaces = computed(() => {
-  if (!searchQuery.value) return places.value
-  return places.value.filter(place =>
-    place.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-    place.description.toLowerCase().includes(searchQuery.value.toLowerCase())
-  )
 })
 
 // Fungsi bantu untuk memformat nama URI menjadi lebih manusiawi
