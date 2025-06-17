@@ -1,256 +1,216 @@
 <template>
-  <div>
-    <!-- Judul visualisasi -->
-    <h2 class="text-xl font-bold mb-4">Visualisasi Ontologi Tempat Bersejarah (Class & Subclass)</h2>
+  <div class="content">
+    <h2>Visualisasi Ontologi Tempat Bersejarah (Kelas, Subkelas, dan Relasi Objek Properti)</h2>
+    <div ref="graphContainer" style="height: 700px; border: 1px solid #ccc;"></div>
 
-    <!-- Container untuk grafik D3 -->
-    <div ref="graphContainer" class="border p-4 bg-white" style="height: 600px;"></div>
-
-    <!-- Panel detail node yang diklik -->
-    <div v-if="clickedNode" class="mt-4 p-4 border bg-gray-100">
-      <h3 class="font-bold">Detail Node</h3>
-      <p><strong>Nama:</strong> {{ clickedNode.name }}</p>
-      <p><strong>Jenis:</strong> {{ clickedNode.type }}</p>
-
-      <!-- Daftar individu dari class yang dipilih -->
-      <div v-if="individuList.length">
-        <p class="mt-2 font-semibold">Individu dalam class ini:</p>
-        <ul class="list-disc ml-6">
-          <li v-for="(ind, index) in individuList" :key="index">
-            {{ formatLocalName(ind) }}
-          </li>
-        </ul>
-      </div>
-      <p v-else class="italic text-sm text-gray-500 mt-2">Tidak ada individu yang ditemukan</p>
+    <!-- Panel Detail Individu -->
+    <div v-if="selectedClass && individuals.length" class="mt-4 p-4 border bg-gray-100">
+      <h3 class="font-semibold">Individu dari: {{ selectedClass }}</h3>
+      <ul class="list-disc ml-6">
+        <li v-for="(item, idx) in individuals" :key="idx">{{ formatName(item) }}</li>
+      </ul>
     </div>
-
-    <!-- Tombol kontrol zoom -->
-    <div class="mt-4 flex gap-2">
-      <button @click="zoomIn" class="px-3 py-1 bg-blue-500 text-white rounded">Zoom In</button>
-      <button @click="zoomOut" class="px-3 py-1 bg-blue-500 text-white rounded">Zoom Out</button>
-      <button @click="fitGraph" class="px-3 py-1 bg-green-500 text-white rounded">Fit All Nodes</button>
+    <div v-else-if="selectedClass" class="mt-4 p-4 text-gray-500 italic">
+      Tidak ditemukan individu untuk class "{{ selectedClass }}"
     </div>
   </div>
 </template>
 
-<script setup>
-// Mengimpor fitur Vue dan D3
-import { ref, onMounted, watch, nextTick } from "vue";
-import { useStore } from "vuex";
-import * as d3 from "d3";
+<script>
+import { Network } from 'vis-network';
 
-// Ref untuk elemen DOM
-const graphContainer = ref(null);
-const clickedNode = ref(null);
-const individuList = ref([]);
-const store = useStore();
-const graphData = ref([]);
+export default {
+  name: 'VisualisasiTempatBersejarah',
+  data() {
+    return {
+      nodes: [],
+      edges: [],
+      selectedClass: null,
+      individuals: [],
+    };
+  },
+  async mounted() {
+    await this.fetchGraphData();
+    this.drawGraph();
+  },
+  methods: {
+    async fetchGraphData() {
+      const query = `
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-let svgElement, zoomInstance, simulation;
+        SELECT DISTINCT ?source ?sourceLabel ?target ?targetLabel ?predicate WHERE {
+          {
+            ?source rdfs:subClassOf ?target .
+            BIND(rdfs:subClassOf AS ?predicate)
+          }
+          UNION {
+            ?predicate a owl:ObjectProperty ;
+                       rdfs:domain ?source ;
+                       rdfs:range ?target .
+          }
 
-// Fungsi untuk format nama individu (ini yang kamu minta)
-function formatLocalName(iri) {
-  const raw = iri.split("#").pop().split("/").pop();
+          OPTIONAL { ?source rdfs:label ?sourceLabel }
+          OPTIONAL { ?target rdfs:label ?targetLabel }
 
-  // Step 1: ganti underscore _ jadi spasi
-  let formatted = raw.replace(/_/g, " ");
+          FILTER (!isBlank(?source) && !isBlank(?target))
+          FILTER (?target != owl:Thing && ?source != owl:Thing)
+          FILTER (STRSTARTS(STR(?source), "http://") || STRSTARTS(STR(?source), "https://"))
+          FILTER (STRSTARTS(STR(?target), "http://") || STRSTARTS(STR(?target), "https://"))
+        }
+      `;
 
-  // Step 2: kasih spasi di antara huruf kecil dan huruf besar (CamelCase -> Spasi)
-  formatted = formatted.replace(/([a-z])([A-Z])/g, "$1 $2");
+      const response = await fetch('http://localhost:3030/TempatBersejarah/sparql', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/sparql-query',
+          Accept: 'application/sparql-results+json',
+        },
+        body: query,
+      });
 
-  // Step 3: kapitalisasi huruf pertama setiap kata
-  formatted = formatted.replace(/\b\w/g, (char) => char.toUpperCase());
+      if (!response.ok) {
+        console.error('SPARQL Error:', await response.text());
+        return;
+      }
 
-  return formatted.trim();
-}
+      const json = await response.json();
+      const nodeMap = new Map();
+      const edgeList = [];
 
-// Saat komponen mount
-onMounted(async () => {
-  await store.dispatch("fetchGraphData");
-  graphData.value = store.state.visualisasi_graph;
-  drawGraph();
-});
+      json.results.bindings.forEach(b => {
+        const sourceIRI = b.source.value;
+        const targetIRI = b.target.value;
+        const predicateIRI = b.predicate.value;
+        const sourceLabel = b.sourceLabel?.value || this.formatName(sourceIRI);
+        const targetLabel = b.targetLabel?.value || this.formatName(targetIRI);
+        const predicateLabel = this.formatName(predicateIRI);
 
-// Update grafik kalau data berubah
-watch(
-  () => store.state.visualisasi_graph,
-  (newData) => {
-    graphData.value = newData;
-    drawGraph();
-  }
-);
+        if (!nodeMap.has(sourceIRI)) {
+          nodeMap.set(sourceIRI, {
+            id: sourceIRI,
+            label: sourceLabel,
+            iri: sourceIRI,
+            color: '#3498db',
+            size: 20,
+          });
+        }
 
-// Fungsi menggambar graph
-async function drawGraph() {
-  if (!graphContainer.value || graphData.value.length === 0) return;
+        if (!nodeMap.has(targetIRI)) {
+          nodeMap.set(targetIRI, {
+            id: targetIRI,
+            label: targetLabel,
+            iri: targetIRI,
+            color: '#2ecc71',
+            size: 20,
+          });
+        }
 
-  const container = graphContainer.value;
-  container.innerHTML = "";
+        edgeList.push({
+          from: sourceIRI,
+          to: targetIRI,
+          arrows: 'to',
+          label: predicateLabel,
+        });
+      });
 
-  const width = container.clientWidth;
-  const height = container.clientHeight;
+      this.nodes = Array.from(nodeMap.values());
+      this.edges = edgeList;
+    },
 
-  const svg = d3.select(container)
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-  const g = svg.append("g");
-  svgElement = g;
-
-  const filteredData = graphData.value.filter((d) => {
-    const isBlankNode = (val) => typeof val === "string" && val.startsWith("_:");
-    return d.relation === "subClassOf" && !isBlankNode(d.source) && !isBlankNode(d.target);
-  });
-
-  const links = filteredData.map((d) => ({
-    source: d.source.split("#").pop(),
-    target: d.target.split("#").pop(),
-    relation: "subClassOf",
-  }));
-
-  const nodes = Array.from(new Set(links.flatMap((l) => [l.source, l.target])))
-    .map((id) => ({
-      id,
-      name: id,
-      type: "Class",
-    }));
-
-  zoomInstance = d3.zoom()
-    .scaleExtent([0.1, 4])
-    .on("zoom", (event) => g.attr("transform", event.transform));
-  svg.call(zoomInstance);
-
-  simulation = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id((d) => d.id).distance(150))
-    .force("charge", d3.forceManyBody().strength(-600))
-    .force("center", d3.forceCenter(width / 2, height / 2));
-
-  const link = g.append("g")
-    .attr("stroke", "#ccc")
-    .selectAll("line")
-    .data(links)
-    .join("line")
-    .attr("stroke-width", 2);
-
-  const node = g.append("g")
-    .attr("stroke", "#fff")
-    .attr("stroke-width", 2)
-    .selectAll("circle")
-    .data(nodes)
-    .join("circle")
-    .attr("r", 15)
-    .attr("fill", "#00aaff")
-    .on("click", async (event, d) => {
-      clickedNode.value = {
-        name: d.name,
-        type: d.type,
+    drawGraph() {
+      const container = this.$refs.graphContainer;
+      const data = {
+        nodes: this.nodes,
+        edges: this.edges,
       };
 
-      if (d.type === "Class") {
-        individuList.value = await store.dispatch("fetchIndividualsByClass", d.name);
-      } else {
-        individuList.value = [];
+      const options = {
+        layout: { improvedLayout: true },
+        nodes: {
+          shape: 'dot',
+          font: { size: 14 },
+        },
+        edges: {
+          arrows: 'to',
+          font: { align: 'middle', size: 10 },
+        },
+        physics: {
+          enabled: true,
+          solver: 'forceAtlas2Based',
+          forceAtlas2Based: {
+            gravitationalConstant: -50,
+            centralGravity: 0.01,
+            springLength: 150,
+            damping: 0.4,
+          },
+          stabilization: { iterations: 200 },
+        },
+      };
+
+      const network = new Network(container, data, options);
+      network.once('stabilizationIterationsDone', () => {
+        network.fit();
+      });
+
+      network.on('click', async (params) => {
+        if (params.nodes.length > 0) {
+          const clickedNode = this.nodes.find(n => n.id === params.nodes[0]);
+          const classIRI = clickedNode?.iri;
+
+          this.selectedClass = this.formatName(classIRI);
+          this.individuals = await this.fetchIndividualsByClassIRI(classIRI);
+        } else {
+          this.selectedClass = null;
+          this.individuals = [];
+        }
+      });
+    },
+
+    async fetchIndividualsByClassIRI(classIRI) {
+      const query = `
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+        SELECT ?individual WHERE {
+          ?individual rdf:type <${classIRI}> .
+          FILTER (STRSTARTS(STR(?individual), "http://") || STRSTARTS(STR(?individual), "https://"))
+        }
+      `;
+
+      const response = await fetch(`http://localhost:3030/TempatBersejarah/sparql`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/sparql-query',
+          Accept: 'application/sparql-results+json',
+        },
+        body: query,
+      });
+
+      if (!response.ok) {
+        console.error("SPARQL Error:", await response.text());
+        return [];
       }
-    })
-    .call(
-      d3.drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended)
-    );
 
-  const text = g.append("g")
-    .selectAll("text")
-    .data(nodes)
-    .join("text")
-    .text((d) => d.name.replace(/([a-z])([A-Z])/g, "$1 $2"))
-    .attr("font-size", 12)
-    .attr("dy", 4)
-    .attr("text-anchor", "middle")
-    .attr("fill", "black")
-    .attr("pointer-events", "none");
+      const json = await response.json();
+      return json.results.bindings.map(b => b.individual.value);
+    },
 
-  const relText = g.append("g")
-    .selectAll("text.relation")
-    .data(links)
-    .join("text")
-    .attr("class", "relation")
-    .text((d) => d.relation)
-    .attr("font-size", 10)
-    .attr("fill", "gray")
-    .attr("text-anchor", "middle")
-    .attr("pointer-events", "none");
-
-  simulation.on("tick", () => {
-    link
-      .attr("x1", (d) => d.source.x)
-      .attr("y1", (d) => d.source.y)
-      .attr("x2", (d) => d.target.x)
-      .attr("y2", (d) => d.target.y);
-
-    node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
-    text.attr("x", (d) => d.x).attr("y", (d) => d.y);
-    relText
-      .attr("x", (d) => (d.source.x + d.target.x) / 2)
-      .attr("y", (d) => (d.source.y + d.target.y) / 2 - 5);
-  });
-
-  simulation.on("end", async () => {
-    await nextTick();
-    fitGraph();
-  });
-
-  function dragstarted(event, d) {
-    if (!event.active) simulation.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
-  }
-  function dragged(event, d) {
-    d.fx = event.x;
-    d.fy = event.y;
-  }
-  function dragended(event, d) {
-    if (!event.active) simulation.alphaTarget(0);
-    d.fx = null;
-    d.fy = null;
-  }
-}
-
-// Fungsi Zoom
-function zoomIn() {
-  if (!zoomInstance) return;
-  const svg = d3.select(graphContainer.value).select("svg");
-  zoomInstance.scaleBy(svg.transition().duration(750), 1.5);
-}
-function zoomOut() {
-  if (!zoomInstance) return;
-  const svg = d3.select(graphContainer.value).select("svg");
-  zoomInstance.scaleBy(svg.transition().duration(750), 0.67);
-}
-
-// Fungsi Fit Graph
-function fitGraph() {
-  if (!svgElement || !zoomInstance) return;
-  if (!graphContainer.value) return;
-
-  const svg = d3.select(graphContainer.value).select("svg");
-  const width = graphContainer.value.clientWidth;
-  const height = graphContainer.value.clientHeight;
-
-  const bounds = svgElement.node().getBBox();
-  if (bounds.width === 0 || bounds.height === 0) return;
-
-  const scale = 0.9 * Math.min(width / bounds.width, height / bounds.height);
-  const translateX = width / 2 - (bounds.x + bounds.width / 2) * scale;
-  const translateY = height / 2 - (bounds.y + bounds.height / 2) * scale;
-
-  svg.transition()
-    .duration(750)
-    .call(zoomInstance.transform, d3.zoomIdentity.translate(translateX, translateY).scale(scale));
-}
+    formatName(iri) {
+      const raw = iri.split('#').pop().split('/').pop();
+      return raw.replace(/_/g, ' ')
+                .replace(/([a-z])([A-Z])/g, '$1 $2')
+                .replace(/^\w/, c => c.toUpperCase());
+    },
+  },
+};
 </script>
 
 <style scoped>
-/* opsional styling */
+.content {
+  padding: 20px;
+}
+h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 </style>
